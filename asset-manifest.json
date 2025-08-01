@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/portfolio.git/static/css/main.cd19ded7.css",
+    "main.js": "/portfolio.git/static/js/main.2e9490fa.js",
+    "static/js/453.96453769.chunk.js": "/portfolio.git/static/js/453.96453769.chunk.js",
+    "static/media/profile.jpg": "/portfolio.git/static/media/profile.78afea97e6fa74296aa5.jpg",
+    "static/media/016.png": "/portfolio.git/static/media/016.22f6bb299fe86ce7bf60.png",
+    "static/media/015-lecturer.png": "/portfolio.git/static/media/015-lecturer.599ac15f7fec4ece46c1.png",
+    "static/media/015-tutor.png": "/portfolio.git/static/media/015-tutor.03525f2cf91c70607b58.png",
+    "static/media/017.jpeg": "/portfolio.git/static/media/017.c2009b30422baaf11fc1.jpeg",
+    "static/media/018.png": "/portfolio.git/static/media/018.5e6902ed575d971dd7d6.png",
+    "static/media/008.png": "/portfolio.git/static/media/008.a9c7a47a50f03a9273eb.png",
+    "static/media/015-admin.png": "/portfolio.git/static/media/015-admin.9f368ce120cfe19a5bc1.png",
+    "static/media/012.png": "/portfolio.git/static/media/012.787e1c90151796462052.png",
+    "static/media/009.png": "/portfolio.git/static/media/009.afcdf65ee5b46773e50f.png",
+    "static/media/001.png": "/portfolio.git/static/media/001.54ec1d30d4e7a438b381.png",
+    "static/media/014.png": "/portfolio.git/static/media/014.3c5513e6b4a87eaceb2f.png",
+    "static/media/004.png": "/portfolio.git/static/media/004.1ec412a8e9cdf769b1cd.png",
+    "static/media/006.png": "/portfolio.git/static/media/006.59278ead5fcd3c976bf5.png",
+    "static/media/011.png": "/portfolio.git/static/media/011.937e6e06b1f16be62765.png",
+    "static/media/010.png": "/portfolio.git/static/media/010.065296a06e07858acf77.png",
+    "static/media/013.png": "/portfolio.git/static/media/013.e187a138204141fb3f10.png",
+    "static/media/007.png": "/portfolio.git/static/media/007.bc4a6bb71c1e09439f63.png",
+    "static/media/003.png": "/portfolio.git/static/media/003.a2c46e1b8d595dd2cf9d.png",
+    "static/media/instagram.png": "/portfolio.git/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/002.png": "/portfolio.git/static/media/002.a66595a46769d2e803b7.png",
+    "static/media/005.png": "/portfolio.git/static/media/005.e62c35029951f003281c.png",
+    "static/media/whatsapp.png": "/portfolio.git/static/media/whatsapp.c826b0165560636baf0b.png",
+    "static/media/logo.svg": "/portfolio.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/portfolio.git/index.html",
+    "main.cd19ded7.css.map": "/portfolio.git/static/css/main.cd19ded7.css.map",
+    "main.2e9490fa.js.map": "/portfolio.git/static/js/main.2e9490fa.js.map",
+    "453.96453769.chunk.js.map": "/portfolio.git/static/js/453.96453769.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd19ded7.css",
+    "static/js/main.2e9490fa.js"
+  ]
+}
