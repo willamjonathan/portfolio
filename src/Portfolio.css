@@ -1,4 +1,4 @@
-/* General */
+/* === General === */
 html, body {
   height: 100%;
   margin: 0;
@@ -8,6 +8,11 @@ html, body {
   background-color: #d6d6d6;
 }
 
+:root {
+  --container-width: 1000px;
+  --container-padding: 1.5rem;
+}
+
 .portfolio-container {
   display: flex;
   flex-direction: column;
@@ -15,6 +20,7 @@ html, body {
   width: 100%;
 }
 
+/* === Header === */
 .portfolio-header {
   position: fixed;
   top: 0;
@@ -26,19 +32,36 @@ html, body {
 }
 
 .portfolio-header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 100%;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* === Title === */
 .portfolio-title {
   font-size: 1.25rem;
   font-weight: bold;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
+/* === Hamburger button === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* === Nav (desktop + mobile) === */
 .portfolio-nav {
   display: flex;
   gap: 1rem;
@@ -50,12 +73,14 @@ html, body {
   border: none;
   cursor: pointer;
   transition: color 0.2s ease;
+  font-size: 0.95rem;
 }
 
 .portfolio-nav-button:hover {
   color: #3b82f6;
 }
 
+/* === Main Content === */
 .portfolio-main {
   flex: 1;
   padding-top: 7rem;
@@ -81,7 +106,7 @@ html, body {
 }
 
 .section-bg-odd {
-  background-color: #d6d6d6; 
+  background-color: #d6d6d6;
 }
 
 .section-bg-even {
@@ -95,10 +120,46 @@ html, body {
   text-align: center;
 }
 
+/* === Footer === */
 .portfolio-footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.875rem;
   color: #a0aec0;
   margin-top: auto;
+}
+
+/* === Mobile Styles (below 768px only) === */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .portfolio-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-title {
+    font-size: 1rem;
+  }
+
+  .portfolio-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .portfolio-nav.open {
+    display: flex;
+  }
+
+  .portfolio-nav-button {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
 }

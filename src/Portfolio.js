@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Portfolio.css";
 
-// Import each section component
 import InfoSection from "./pages/information";
 import ExperienceSection from "./pages/experience";
 import ProjectSection from "./pages/project";
@@ -12,35 +11,44 @@ import ContactSection from "./pages/contact";
 const sections = ["Information", "Experience", "Projects", "Others", "Contact"];
 
 export default function Portfolio() {
-  // Smooth scroll to section
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // close menu on navigation
     }
   };
 
   return (
     <div className="portfolio-container">
-      {/* Header */}
       <header className="portfolio-header">
-        <div className="portfolio-header-content">
-          <h1 className="portfolio-title">William Jonathan Mulyadi</h1>
-          <nav className="portfolio-nav">
-            {sections.map((section) => (
-              <button
-                key={section}
-                onClick={() => scrollToSection(section.toLowerCase())}
-                className="portfolio-nav-button"
-              >
-                {section}
-              </button>
-            ))}
-          </nav>
-        </div>
-      </header>
+  <div className="portfolio-header-content">
+    <h1 className="portfolio-title">William Jonathan Mulyadi</h1>
 
-      {/* Sections with scroll-triggered fly-up + fade-in */}
+    <button
+      className="menu-toggle"
+      onClick={() => setMenuOpen(!menuOpen)}
+    >
+      ☰
+    </button>
+
+    <nav className={`portfolio-nav ${menuOpen ? "open" : ""}`}>
+      {sections.map((section) => (
+        <button
+          key={section}
+          onClick={() => scrollToSection(section.toLowerCase())}
+          className="portfolio-nav-button"
+        >
+          {section}
+        </button>
+      ))}
+    </nav>
+  </div>
+</header>
+
+
       <main className="portfolio-main">
         {sections.map((section, index) => (
           <motion.section
