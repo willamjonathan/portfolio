@@ -1,0 +1,355 @@
+/* ========== BASE FONT SIZE ========== */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* ========== GRID LAYOUT FOR PROJECT CARDS ========== */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 900px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== INDIVIDUAL CARD STYLES ========== */
+.project-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #d6d6d6;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ========== MODAL POPUP OVERLAY ========== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ========== MODAL CONTENT ========== */
+.popup-content {
+  background-color: #d6d6d6;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 1.25rem;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ========== POPUP TITLE ========== */
+.pop_title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ========== SUMMARY TEXT STYLES ========== */
+.pop_summary {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.pop_summary p {
+  margin: 0.5rem 0;
+}
+
+/* ========== IMAGE WRAPPER ========== */
+.pop_imgg {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+
+
+/* ========== BUTTON STYLES ========== */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.button-container .button {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #c4c4c4;
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-container .button:hover {
+  background-color: #b4b4b4;
+}
+
+.button-container .button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== CLOSE BUTTON ========== */
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ========== ANIMATION ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* PROJECT IMAGE CLASSES */
+.pop-img.p1 {
+  background-image: url('../img/project/001.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p2 {
+  background-image: url('../img/project/002.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p3 {
+  background-image: url('../img/project/003.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p4 {
+  background-image: url('../img/project/004.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p5 {
+  background-image: url('../img/project/005.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p6 {
+  background-image: url('../img/project/006.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p7 {
+  background-image: url('../img/project/007.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p8 {
+  background-image: url('../img/project/008.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p9 {
+  background-image: url('../img/project/009.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p10 {
+  background-image: url('../img/project/010.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p11 {
+  background-image: url('../img/project/011.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p12 {
+  background-image: url('../img/project/012.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p13 {
+  background-image: url('../img/project/013.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p14 {
+  background-image: url('../img/project/014.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p15-lecturer {
+  background-image: url('../img/project/015-lecturer.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p15-tutor {
+  background-image: url('../img/project/015-tutor.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p15-admin {
+  background-image: url('../img/project/015-admin.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop_imgg.multiple {
+  display: flex;
+  gap: 16px; /* or 20px, as you like */
+  flex-wrap: wrap;
+}
+.pop-img.p16 {
+  background-image: url('../img/project/016.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p17 {
+  background-image: url('../img/project/017.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+.pop-img.p18 {
+  background-image: url('../img/project/018.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
