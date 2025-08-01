@@ -149,11 +149,14 @@ const dataProjects = [
 ,
 {
     // pict ke 18
+    // https://willamjonathan.github.io/portfolio
+
   id: '008',
   title: "William's Portfolio",
   summary: 'A personal portfolio showcasing my projects and skills.',
   tools: 'React, JavaScript, CSS',
   description: `
+        <p><a href="https://willamjonathan.github.io/portfolio">Website's link</a></p>
     <b>Tools:</b> React, JavaScript, CSS<br/>
     <b>Description:</b>
     <p>This portfolio website is designed to present my academic, professional, and personal projects in a clean and accessible way. It highlights my experience across fullstack development, research, and design, with detailed project pages and interactive components. The site is continually updated as I expand my skills and complete new work.</p>
