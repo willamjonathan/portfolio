@@ -3,6 +3,12 @@ html {
   font-size: 16px;
 }
 
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -15,6 +21,12 @@ html {
   }
 }
 
+/* ========== GLOBAL BODY PADDING FOR SAFE AREAS ========== */
+body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  margin: 0;
+}
+
 /* ========== GRID LAYOUT FOR PROJECT CARDS ========== */
 .project-container {
   display: grid;
@@ -23,7 +35,7 @@ html {
   padding: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .project-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -112,9 +124,43 @@ html {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 100%;
 }
 
+/* ========== IMAGE STYLES (RESPONSIVE) ========== */
+.pop-img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: 12px;
+}
 
+/* ========== INDIVIDUAL PROJECT IMAGE CLASSES ========== */
+.pop-img.p1  { background-image: url('../img/project/001.png'); }
+.pop-img.p2  { background-image: url('../img/project/002.png'); }
+.pop-img.p3  { background-image: url('../img/project/003.png'); }
+.pop-img.p4  { background-image: url('../img/project/004.png'); }
+.pop-img.p5  { background-image: url('../img/project/005.png'); }
+.pop-img.p6  { background-image: url('../img/project/006.png'); }
+.pop-img.p7  { background-image: url('../img/project/007.png'); }
+.pop-img.p8  { background-image: url('../img/project/008.png'); }
+.pop-img.p9  { background-image: url('../img/project/009.png'); }
+.pop-img.p10 { background-image: url('../img/project/010.png'); }
+.pop-img.p11 { background-image: url('../img/project/011.png'); }
+.pop-img.p12 { background-image: url('../img/project/012.png'); }
+.pop-img.p13 { background-image: url('../img/project/013.png'); }
+.pop-img.p14 { background-image: url('../img/project/014.png'); }
+.pop-img.p15-lecturer { background-image: url('../img/project/015-lecturer.png'); }
+.pop-img.p15-tutor    { background-image: url('../img/project/015-tutor.png'); }
+.pop-img.p15-admin    { background-image: url('../img/project/015-admin.png'); }
+.pop-img.p16 { background-image: url('../img/project/016.png'); }
+.pop-img.p17 { background-image: url('../img/project/017.jpeg'); }
+.pop-img.p18 { background-image: url('../img/project/018.png'); }
 
 /* ========== BUTTON STYLES ========== */
 .button-container {
@@ -167,189 +213,47 @@ html {
 }
 
 
-/* PROJECT IMAGE CLASSES */
-.pop-img.p1 {
-  background-image: url('../img/project/001.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
 
-.pop-img.p2 {
-  background-image: url('../img/project/002.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+/* ========== MOBILE FIX FOR SMALL SCREENS (e.g. iPhone 12) ========== */
+@media (max-width: 480px) {
+  .project-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
 
-.pop-img.p3 {
-  background-image: url('../img/project/003.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .project-card {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
 
-.pop-img.p4 {
-  background-image: url('../img/project/004.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .project-title {
+    font-size: 1.2rem;
+  }
 
-.pop-img.p5 {
-  background-image: url('../img/project/005.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .project-description {
+    font-size: 0.9rem;
+  }
 
-.pop-img.p6 {
-  background-image: url('../img/project/006.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .pop_title {
+    font-size: 1.5rem;
+  }
 
-.pop-img.p7 {
-  background-image: url('../img/project/007.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .popup-content {
+    padding: 1rem;
+  }
 
-.pop-img.p8 {
-  background-image: url('../img/project/008.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .pop-img {
+    max-width: 90%;
+    aspect-ratio: 4 / 3;
+  }
 
-.pop-img.p9 {
-  background-image: url('../img/project/009.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
+  .button-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-.pop-img.p10 {
-  background-image: url('../img/project/010.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
+  .button-container .button {
+    width: 100%;
+    text-align: center;
+  }
 }
-
-.pop-img.p11 {
-  background-image: url('../img/project/011.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p12 {
-  background-image: url('../img/project/012.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p13 {
-  background-image: url('../img/project/013.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p14 {
-  background-image: url('../img/project/014.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p15-lecturer {
-  background-image: url('../img/project/015-lecturer.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p15-tutor {
-  background-image: url('../img/project/015-tutor.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p15-admin {
-  background-image: url('../img/project/015-admin.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop_imgg.multiple {
-  display: flex;
-  gap: 16px; /* or 20px, as you like */
-  flex-wrap: wrap;
-}
-.pop-img.p16 {
-  background-image: url('../img/project/016.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p17 {
-  background-image: url('../img/project/017.jpeg');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
-.pop-img.p18 {
-  background-image: url('../img/project/018.png');
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 12px;
-}
-
