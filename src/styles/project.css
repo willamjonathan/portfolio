@@ -21,13 +21,13 @@ html {
   }
 }
 
-/* ========== GLOBAL BODY PADDING FOR SAFE AREAS ========== */
+/* ========== SAFE AREA & BODY RESET ========== */
 body {
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   margin: 0;
 }
 
-/* ========== GRID LAYOUT FOR PROJECT CARDS ========== */
+/* ========== PROJECT GRID ========== */
 .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -47,7 +47,7 @@ body {
   }
 }
 
-/* ========== INDIVIDUAL CARD STYLES ========== */
+/* ========== PROJECT CARD ========== */
 .project-card {
   padding: 1rem;
   border-radius: 1rem;
@@ -72,7 +72,7 @@ body {
   color: #333;
 }
 
-/* ========== MODAL POPUP OVERLAY ========== */
+/* ========== POPUP OVERLAY ========== */
 .popup {
   position: fixed;
   top: 0;
@@ -84,22 +84,27 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow-y: auto; /* Fallback scroll for tall modals */
 }
 
-/* ========== MODAL CONTENT ========== */
+/* ========== POPUP CONTENT ========== */
 .popup-content {
   background-color: #d6d6d6;
   padding: 2rem;
   width: 90%;
   max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 1.25rem;
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
   font-size: 1rem;
   color: #222;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* ========== POPUP TITLE ========== */
+/* ========== POPUP TEXT STYLING ========== */
 .pop_title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -107,7 +112,6 @@ body {
   text-align: center;
 }
 
-/* ========== SUMMARY TEXT STYLES ========== */
 .pop_summary {
   text-align: left;
   font-size: 1rem;
@@ -119,7 +123,7 @@ body {
   margin: 0.5rem 0;
 }
 
-/* ========== IMAGE WRAPPER ========== */
+/* ========== IMAGE CONTAINER ========== */
 .pop_imgg {
   display: flex;
   justify-content: center;
@@ -129,7 +133,7 @@ body {
   max-width: 100%;
 }
 
-/* ========== IMAGE STYLES (RESPONSIVE) ========== */
+/* ========== PROJECT IMAGE STYLE ========== */
 .pop-img {
   background-size: cover;
   background-position: center;
@@ -212,9 +216,7 @@ body {
   }
 }
 
-
-
-/* ========== MOBILE FIX FOR SMALL SCREENS (e.g. iPhone 12) ========== */
+/* ========== MOBILE (iPhone + Small Screens) ========== */
 @media (max-width: 480px) {
   .project-container {
     padding: 1rem;
@@ -240,6 +242,9 @@ body {
 
   .popup-content {
     padding: 1rem;
+    max-height: 85vh;
+    width: 95%;
+    font-size: 0.95rem;
   }
 
   .pop-img {
