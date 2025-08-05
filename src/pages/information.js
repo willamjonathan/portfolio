@@ -47,7 +47,7 @@ export default function InfoSection() {
               </li>
               <li>
                 Bina Nusantara International University (2021–2025) –
-                <span className="font-medium"> S. IlKom</span>
+                <span className="font-medium"> S. Kom</span>
               </li>
             </ul>
           </div>
